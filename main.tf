@@ -1,8 +1,10 @@
 #configure the AWS provider
 provider "aws" {
-    region = "us-west-1"
+    region = "us-east-1"
     profile = "terraform-user"
+    
 }
+
 #storing the state file in s3 bucket
 terraform {
   backend "s3" {
