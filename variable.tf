@@ -42,3 +42,10 @@ variable "public_subnet_az1_cidr_block" {
   default     = "10.0.5.0/24"
   type        = string
   }
+
+#security group variables
+variable "ssh_location" {
+  default = "0.0.0.0/0" #should limited to my ip adresse
+  description ="ip adresse that can ssh into the ec2"
+  type        = string
+  }
