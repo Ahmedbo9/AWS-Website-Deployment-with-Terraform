@@ -126,3 +126,4 @@ resource "aws_subnet" "private_data_subnet_az2" {
     Name    = "private data subnet az2"
   }
 }
+
