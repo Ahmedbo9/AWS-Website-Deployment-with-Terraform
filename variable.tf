@@ -74,3 +74,12 @@ variable "database_snapshot" {
   description ="create a standby db instance"
   type        = bool
   }
+
+#ALB variables
+   variable "ssl_certificate_arn" {
+  default = "arn:aws:acm:us-east-1:851725429413:certificate/b2d1d49c-b236-43ad-af79-a3dd5d9485bc"
+  description ="ssl certifiate arn"
+  type        = string
+  }
+
+  
