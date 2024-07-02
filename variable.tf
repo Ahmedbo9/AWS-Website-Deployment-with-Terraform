@@ -82,4 +82,11 @@ variable "database_snapshot" {
   type        = string
   }
 
+  #SNS variable
+   variable "sns_email" {
+  default = "a@live.fr"
+  description ="email-adress"
+  type        = string
+  }
+
   
