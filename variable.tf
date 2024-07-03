@@ -114,4 +114,17 @@ variable "database_snapshot" {
   type        = string
   }
 
+  #Route53 variables
+
+variable "domain_name" {
+  default = "ahmed-bo-project.com"
+  description ="domain name"
+  type        = string
+  }
+
+  variable "record_name" {
+  default = "www"
+  description ="subdomain name"
+  type        = string
+  }
   
