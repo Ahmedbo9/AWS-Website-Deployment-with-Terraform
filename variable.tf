@@ -52,19 +52,19 @@ variable "ssh_location" {
 
 
 variable "database_snapshot" {
-  default = "arn:aws:rds:us-east-1:851725429413:snapshot:dev-rds-db-snapshot"
+  default = "arn:aws:rds:us-east-1:851725429413:snapshot:dev-database-snapshot-shopwise"
   description ="database_snapshot"
   type        = string
   }
 
   variable "database_instance_class" {
-  default = "db.t2.small"
+  default = "db.t3.micro"
   description ="database instance type"
   type        = string
   }
 
   variable "database_instance_identifier" {
-  default = "dev-rds-db"
+  default = "dev-database-snapshot-shopwise"
   description ="database instance database_instance_identifier"
   type        = string
   }
@@ -86,6 +86,31 @@ variable "database_snapshot" {
    variable "sns_email" {
   default = "a@live.fr"
   description ="email-adress"
+  type        = string
+  }
+
+   #autoscaling group variables
+   variable "launch_template_name" {
+  default = "webserver-launch-template"
+  description ="launch template name"
+  type        = string
+  }
+
+   variable "EC2_image_id" {
+  default = "ami-0c85bbaa62651e59b"
+  description ="ami id"
+  type        = string
+  }
+
+   variable "EC2_instance_type" {
+  default = "t2.micro"
+  description ="ec2 instance type"
+  type        = string
+  }
+
+   variable "EC2_keypair" {
+  default = "EC2 tuto"
+  description ="name of the keypair"
   type        = string
   }
 
